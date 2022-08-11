@@ -1,4 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
+import { dateFormatter, priceFormatter } from "../../utils/formatter";
 import Header from "../../components/Header";
 import Summary from "../../components/Summary";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
@@ -27,10 +28,13 @@ const Transactions = () => {
                 <tr key={t.id}>
                   <td width="50%">{t.description}</td>
                   <td>
-                    <PriceHighLight variant={t.type}>{t.price}</PriceHighLight>
+                    <PriceHighLight variant={t.type}>
+                      {t.type === "outcome" && "- "}
+                      {priceFormatter.format(t.price)}
+                    </PriceHighLight>
                   </td>
                   <td>{t.category}</td>
-                  <td>{t.category}</td>
+                  <td>{dateFormatter.format(new Date(t.createdAt))}</td>
                 </tr>
               );
             })}
