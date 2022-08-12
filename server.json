@@ -15,6 +15,30 @@
       "category": "Comida",
       "price": 9000,
       "createdAt": "2022-01-02T00:00:00"
+    },
+    {
+      "description": "teste descri",
+      "category": "testecategory",
+      "price": 11,
+      "type": "outcome",
+      "createdAt": "2022-08-12T00:49:07.876Z",
+      "id": 3
+    },
+    {
+      "description": "sushi",
+      "category": "alimentos",
+      "price": 34,
+      "type": "outcome",
+      "createdAt": "2022-08-12T01:02:18.629Z",
+      "id": 4
+    },
+    {
+      "description": "salario",
+      "category": "frela",
+      "price": 33,
+      "type": "income",
+      "createdAt": "2022-08-12T01:03:11.165Z",
+      "id": 5
     }
   ]
 }
